@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import Counter from './components/Counter'
+// import { Container, Row } from "react-bootstrap";
+// pasar el prop
 
 function App() {
+
+  const mensajeBienvenida = <h2>bienvenido al repaso</h2>
+  const nombre = "Agustina";
+// lo que paso por nombre en el first name tiene q llamarse igual q la variable
+// al nombde de la propiedad (fistname le puedo poner cualquier nombre pero es una buena practica  q la prop tenga el mismo nombre al que le voya  asignar)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>      
+    {mensajeBienvenida}
+  
+    <Counter firstName={nombre}/>
+    </>
   );
 }
 
