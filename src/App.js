@@ -6,6 +6,8 @@ import {useState} from 'react';
 // import { Container, Row } from "react-bootstrap";
 // pasar el prop
 
+//hook useState
+
 function App() {
 
   const mensajeBienvenida = <h2>bienvenido al repaso</h2>
