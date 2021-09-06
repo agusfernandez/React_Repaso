@@ -1,5 +1,6 @@
 // le podemos pasar datos de otro lado y a ello se le llama props ( a los datos)
 import { useState } from "react";
+import {Container, Row, Col, Button} from 'react-bootstrap'
 
 //{nombre} > le paso la propiedad nombre desestructurada ya que es un objeto
 const Counter =({nombre, setNombre})=>{
@@ -67,23 +68,31 @@ const Counter =({nombre, setNombre})=>{
 
     return(
         <>
-            <h3>El nombre del desarrollador es {nombre}</h3>
-            <button onClick={()=>increment()}>+</button>
-            <span>{count}</span>
-            <button onClick={()=>decrement()}>-</button>
+        <Container>
+            <Row>
+                <Col lg={4} sm={12}>
+                    <h5>El nombre del desarrollador es {nombre}</h5>
+                    <Button onClick={()=>increment()}>+</Button>
+                    <span>{count}</span>
+                    <Button onClick={()=>decrement()}>-</Button>
+                </Col>
+                <Col lg={4} sm={12}>
+                    <h5>Otro tipo de renderizado</h5>
+                    <Button onClick={()=>incrementTwo()}>+</Button>
+                    <span>{iniciar}</span>
+                    <span>{name}</span>
+                    <Button onClick={()=>decrementTwo()}>-</Button>
+                </Col>
+                <Col lg={4} sm={12}>
+                    <h5>Dos hooks</h5>
+                    <Button onClick={()=>incrementThree()}>+</Button>
+                    <span>{change}</span>
+                    <span>{surname}</span>
+                    <Button onClick={()=>decrementThree()}>-</Button>
+                </Col>
 
-            <h3>Otro tipo de renderizado</h3>
-            <button onClick={()=>incrementTwo()}>+</button>
-            <span>{iniciar}</span>
-            <span>{name}</span>
-            <button onClick={()=>decrementTwo()}>-</button>
-
-            <h3>Dos hooks</h3>
-            <button onClick={()=>incrementThree()}>+</button>
-            <span>{change}</span>
-            <span>{surname}</span>
-            <button onClick={()=>decrementThree()}>-</button>
-
+            </Row>
+        </Container>
 
         </>
     );

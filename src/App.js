@@ -2,8 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import Counter from './components/Counter'
 import {useState} from 'react';
-
-// import { Container, Row } from "react-bootstrap";
+import Tabs  from './components/Tabs';
+import {Container, Row, Col, Button} from 'react-bootstrap';
+import SlowComponent  from './components/SlowComponent';
 // pasar el prop
 
 //hook useState
@@ -23,9 +24,19 @@ return (
 
   // le tengo q pasar el setNombre para que cambie el estado en el counter.js
     <>      
-    {mensajeBienvenida}
-    <h2> Otra forma de setear el estado del nombre: {nombre}</h2>
-    <Counter nombre={nombre} setNombre={setNombre}/>
+    <Container>
+      <Row>
+        {mensajeBienvenida}
+        <h4> Otra forma de setear el estado del nombre: {nombre}</h4>
+        <Counter nombre={nombre} setNombre={setNombre}/>
+      </Row>
+      <Row>
+        <Tabs/>
+      </Row>
+      <Row>
+        <SlowComponent/>
+      </Row>
+    </Container>
     </>
   );
 }
