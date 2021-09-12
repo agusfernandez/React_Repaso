@@ -1,4 +1,6 @@
 import {useState, useMemo} from 'react';
+import {Container, Row, Col, Button, InputGroup, FormControl} from 'react-bootstrap';
+
 
 //componente q va hacer lento en renderizar
 const SlowComponent = ()=>{
@@ -15,9 +17,19 @@ const SlowComponent = ()=>{
     
     return (
         <>
-            <input type="number" value={number} onChange= {(e)=> setNumber (parseInt(e.target.value))}></input>
-            <button onClick={()=>setDark((prevDark) => !prevDark)}>Cambiar Tema</button>
-            <div style={themeStyle}>{doubleNumber}</div>
+            <Container>
+                <Row>
+                    <Col lg={4} sm={12}>
+                        <FormControl type="number" value={number} onChange= {(e)=> setNumber (parseInt(e.target.value))}/>
+                    </Col>
+                    <Col lg={2} sm={12}>
+                      <Button onClick={()=>setDark((prevDark) => !prevDark)}>Cambiar Tema</Button>
+                    </Col>
+                    <Col lg={6} sm={12}>
+                        <div style={themeStyle}>{doubleNumber}</div>
+                    </Col>
+                </Row>
+            </Container>
         </>
     );
 }

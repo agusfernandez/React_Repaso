@@ -1,6 +1,6 @@
 // le podemos pasar datos de otro lado y a ello se le llama props ( a los datos)
 import { useState } from "react";
-import {Container, Row, Col, Button} from 'react-bootstrap'
+import {Container, Row, Col, Button} from 'react-bootstrap';
 
 //{nombre} > le paso la propiedad nombre desestructurada ya que es un objeto
 const Counter =({nombre, setNombre})=>{

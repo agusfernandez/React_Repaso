@@ -1,17 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 import Counter from './components/Counter'
 import {useState} from 'react';
 import Tabs  from './components/Tabs';
 import {Container, Row, Col, Button} from 'react-bootstrap';
 import SlowComponent  from './components/SlowComponent';
+import NameInput from './components/NameInput';
 // pasar el prop
 
 //hook useState
 
 function App() {
 
-  const mensajeBienvenida = <h2>bienvenido al repaso</h2>
+  const mensajeBienvenida = <h2>Bienvenido al repaso</h2>
   //const nombre = "Agustina";
 
   // lo que paso por nombre en el first name tiene q llamarse igual q la variable
@@ -35,6 +35,9 @@ return (
       </Row>
       <Row>
         <SlowComponent/>
+      </Row>
+      <Row>
+        <NameInput/>
       </Row>
     </Container>
     </>

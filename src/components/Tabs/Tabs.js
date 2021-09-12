@@ -23,14 +23,20 @@ const Tabs = ()=>{
         <>
         <Container>
             <Row>
-                <Col>               
-                    <h3>{tabs}</h3>
-                    <Button onClick={()=>setTabs("Posts")}>Posts</Button>
-                    <Button onClick={()=>setTabs("Users")}>Users</Button>
-                    <Button onClick={()=>setTabs("Comments")}>Comments</Button>
-                    <h4>{tabs}</h4>
-                </Col>
+                <Card style={{ width: '18rem' }}>
+                 <Card.Body>
+                        <Col>               
+                            <h3>Los tabs son {tabs}</h3>
+                            <h4>{tabs}</h4>
+                    
+                            <Button onClick={()=>setTabs("Posts")}>Posts</Button>
+                            <Button onClick={()=>setTabs("Users")}>Users</Button>
+                    
+                            <Button onClick={()=>setTabs("Comments")}>Comments</Button>
+                        </Col> 
+                    </Card.Body>
 
+                </Card>
             </Row>
         </Container>
         </>
