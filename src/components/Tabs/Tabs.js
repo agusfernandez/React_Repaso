@@ -21,24 +21,20 @@ const Tabs = ()=>{
     //ponemos al array para indicar q parametro se modifica
     return(
         <>
-        <Container>
-            <Row>
-                <Card style={{ width: '18rem' }}>
-                 <Card.Body>
-                        <Col>               
-                            <h3>Los tabs son {tabs}</h3>
-                            <h4>{tabs}</h4>
-                    
-                            <Button onClick={()=>setTabs("Posts")}>Posts</Button>
-                            <Button onClick={()=>setTabs("Users")}>Users</Button>
-                    
-                            <Button onClick={()=>setTabs("Comments")}>Comments</Button>
-                        </Col> 
-                    </Card.Body>
 
-                </Card>
-            </Row>
-        </Container>
+                    <Card style={{ width: '100%', padding:'0' }} className="section-tab">
+                    <Card.Body>
+                            <Col>               
+                                <h3 className="title">Los tabs son <span className="tabs-span">{tabs}</span></h3>
+                                <h4 className="title-change">{tabs}</h4>
+                                <Button onClick={()=>setTabs("Posts")} className="tabs-button">Posts</Button>{' '}
+                                <Button onClick={()=>setTabs("Users")} className="tabs-button">Users</Button>{' '}
+                                <Button onClick={()=>setTabs("Comments")} className="tabs-button">Comments</Button>{' '}
+                            </Col> 
+                        </Card.Body>
+
+                    </Card>
+              
         </>
     )
 }

@@ -31,10 +31,9 @@ return (
         <Counter nombre={nombre} setNombre={setNombre}/>
       </Row>
       <Row>
-        <Tabs/>
-      </Row>
-      <Row>
-        <SlowComponent/>
+          <Col lg={4} style={{padding:'0'}}><Tabs/></Col>
+          <Col lg={8} style={{padding:'0'}}><SlowComponent/></Col>
+
       </Row>
       <Row>
         <NameInput/>

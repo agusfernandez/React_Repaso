@@ -1,5 +1,5 @@
 import {useState, useMemo} from 'react';
-import {Container, Row, Col, Button, InputGroup, FormControl} from 'react-bootstrap';
+import {Container, Row, Col, Button, InputGroup, FormControl, Card} from 'react-bootstrap';
 
 
 //componente q va hacer lento en renderizar
@@ -11,25 +11,28 @@ const SlowComponent = ()=>{
     }, [number]);
 
     const themeStyle ={
-        backgroundColor: dark ? "black": "white",
-        color: dark ? "white": "black"
+        backgroundColor: dark ? "blue": "white",
+        color: dark ? "white": "blue"
     }
     
     return (
         <>
-            <Container>
-                <Row>
-                    <Col lg={4} sm={12}>
-                        <FormControl type="number" value={number} onChange= {(e)=> setNumber (parseInt(e.target.value))}/>
-                    </Col>
-                    <Col lg={2} sm={12}>
-                      <Button onClick={()=>setDark((prevDark) => !prevDark)}>Cambiar Tema</Button>
-                    </Col>
-                    <Col lg={6} sm={12}>
-                        <div style={themeStyle}>{doubleNumber}</div>
-                    </Col>
-                </Row>
-            </Container>
+         
+                  <Card style={{ width: '100%' }} className="section-tab">
+                        <Card.Body>
+                            <Row>
+                                <Col lg={4} sm={12}>
+                                    <FormControl type="number" value={number} onChange= {(e)=> setNumber (parseInt(e.target.value))}/>
+                                </Col>
+                                <Col lg={2} sm={12}>
+                                    <Button onClick={()=>setDark((prevDark) => !prevDark)}>Cambiar Tema</Button>
+                                </Col>
+                                <Col lg={6} sm={12}>
+                                    <div style={themeStyle}>{doubleNumber}</div>
+                                </Col>
+                            </Row>
+                        </Card.Body>
+                    </Card>
         </>
     );
 }

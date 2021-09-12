@@ -1,6 +1,6 @@
 // le podemos pasar datos de otro lado y a ello se le llama props ( a los datos)
 import { useState } from "react";
-import {Container, Row, Col, Button} from 'react-bootstrap';
+import {Container, Row, Col, Button, Card} from 'react-bootstrap';
 
 //{nombre} > le paso la propiedad nombre desestructurada ya que es un objeto
 const Counter =({nombre, setNombre})=>{
@@ -70,27 +70,38 @@ const Counter =({nombre, setNombre})=>{
         <>
         <Container>
             <Row>
-                <Col lg={4} sm={12}>
-                    <h5>El nombre del desarrollador es {nombre}</h5>
-                    <Button onClick={()=>increment()}>+</Button>
-                    <span>{count}</span>
-                    <Button onClick={()=>decrement()}>-</Button>
+                <Col lg={4} sm={12} style={{ padding: '0' }}>
+                    <Card style={{ width: '100%' }}>
+                    <Card.Body>
+                        <h5>El nombre del desarrollador es {nombre}</h5>
+                        <Button onClick={()=>increment()}>+</Button>{' '}
+                        <Button onClick={()=>decrement()}>-</Button>{' '}
+                        <span>{count}</span>
+                    </Card.Body>
+                    </Card>
                 </Col>
-                <Col lg={4} sm={12}>
-                    <h5>Otro tipo de renderizado</h5>
-                    <Button onClick={()=>incrementTwo()}>+</Button>
-                    <span>{iniciar}</span>
-                    <span>{name}</span>
-                    <Button onClick={()=>decrementTwo()}>-</Button>
+                <Col lg={4} sm={12} style={{ padding: '0' }}>
+                <Card style={{ width: '100%' }}>
+                    <Card.Body>
+                            <h5>Otro tipo de renderizado</h5>
+                            <Button onClick={()=>incrementTwo()}>+</Button>{' '}
+                            <Button onClick={()=>decrementTwo()}>-</Button>{' '}
+                            <span>{iniciar}</span>
+                            <span>{name}</span>
+                    </Card.Body>
+                    </Card>
                 </Col>
-                <Col lg={4} sm={12}>
-                    <h5>Dos hooks</h5>
-                    <Button onClick={()=>incrementThree()}>+</Button>
-                    <span>{change}</span>
-                    <span>{surname}</span>
-                    <Button onClick={()=>decrementThree()}>-</Button>
+                <Col lg={4} sm={12} style={{ padding: '0' }}>
+                    <Card style={{ width: '100%' }}>
+                    <Card.Body>
+                            <h5>Dos hooks</h5>
+                            <Button onClick={()=>incrementThree()}>+</Button>{' '}
+                            <Button onClick={()=>decrementThree()}>-</Button>{' '}
+                            <span>{change}</span>
+                            <span>{surname}</span>
+                    </Card.Body>
+                    </Card>
                 </Col>
-
             </Row>
         </Container>
 
