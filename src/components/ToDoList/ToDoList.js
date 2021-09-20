@@ -1,4 +1,4 @@
-import {Container, Row, Col, Button} from 'react-bootstrap';
+import {Container, Row, Col, Button, Card, FormControl } from 'react-bootstrap';
 import {useState, useReducer} from 'react';
 import toDoReducer from '../../reducers/toDoReducer';
 import {ACTIONS} from '../../actions/toDoAction';
@@ -22,16 +22,19 @@ const ToDoList = ()=>{
         <>
             <Container>
                 <Row>
-                    <form onSubmit={handleSubmit}>
-                        <input type="text" value={name} onChange ={(e)=>setName(e.target.value)}>
+                    <Card style={{ width: '100%' }} className="section-tab">
+                    <Card.Body>
+                        <form onSubmit={handleSubmit} style={{ width: '100%', margin:'20px 0px' }}>
+                            <input type="text" value={name} onChange ={(e)=>setName(e.target.value)} style={{ width: '100%' }} placeholder="Ingrese un texto">
 
-                        </input>
-                    </form>
-
-                    {toDos.map((toDo)=>{
-                        return <ToDo key={toDo.id} toDo={toDo} dispatch={dispatch}/>
-
-                    })}
+                            </input>
+                        </form>
+                 
+                        {toDos.map((toDo)=>{
+                            return <ToDo key={toDo.id} toDo={toDo} dispatch={dispatch}/>
+                        })}
+                       </Card.Body>
+                    </Card>
                 </Row>
             </Container>
         </>
