@@ -5,6 +5,7 @@ import Tabs  from './components/Tabs';
 import {Container, Row, Col, Button} from 'react-bootstrap';
 import SlowComponent  from './components/SlowComponent';
 import NameInput from './components/NameInput';
+import ToDoList from './components/ToDoList';
 // pasar el prop
 
 //hook useState
@@ -37,6 +38,9 @@ return (
       </Row>
       <Row>
         <NameInput/>
+      </Row>
+      <Row>
+        <ToDoList/>
       </Row>
     </Container>
     </>
